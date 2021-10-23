@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+
+
+
+			function f_dd() {
+				var gl_date = new Date();
+				var str_getDate = ""+gl_date.getDate();
+				var getDate_str = (str_getDate.length == 1)?"0"+str_getDate:str_getDate;
+				return getDate_str;
+			}
+
+			function f_mm() {
+				var gl_date = new Date();
+				var str_getMonth = gl_date.getMonth()+1+"";
+				var getMonth_str = (str_getMonth.length == 1)?"0"+str_getMonth:str_getMonth;
+				return getMonth_str;
+			}
+
+			function f_yyyy() {
+				var gl_date = new Date();
+				var str_getYear = ""+gl_date.getFullYear();
+				return str_getYear;
+			}
+
+			var MMM = 9
+
+			var mesyac_arr = [' ',
+				'январь', 'февраль', 'март', 
+				'апрель','май', 'июнь', 'июль', 
+				'август','сентябрь', 'октябрь', 
+				'ноябрь', 'декабрь'
+			];
+			var mesyac = document.createElement("div");
+				mesyac.style.width = "238px";
+				mesyac.style.height = "32px";
+				mesyac.style.textAlign = "right";
+				mesyac.innerHTML = mesyac_arr[MMM+1]+" 2021";
+			document.body.append(mesyac);		
+
+
+			var doc = document.createElement("div");
+
+
+			doc.id = "glDIVVVV"
+			doc.style.width = "238px";
+			doc.style.display = "flex";
+			doc.style.flexWrap = "wrap";
+			//doc.style.height = "238px";
+					
+			//doc.innerHTML = f_dd()+"."+f_mm()+"."+f_yyyy();
+				
+			document.body.append(doc);
+
+			var days = [
+				'Ыы',
+				'Пн',
+				'Вт',
+				'Ср',
+				'Чт',
+				'Пт',
+				'Сб',
+				'Вc'
+			];
+
+			
+			function f_week_div() {
+				for (i=1;i<8;i++) {
+					var week_Div = document.createElement("div");
+					week_Div.style.width = "30px"
+					week_Div.style.height = "30px"
+					week_Div.style.border = "1px solid red"
+					week_Div.style.margin = "1px 1px 1px 1px"
+					if (i == 6) week_Div.style.backgroundColor = "#fdaf1a"
+					if (i == 7) week_Div.style.backgroundColor = "#fdaf1a"
+					week_Div.innerHTML = days[i]
+					glDIVVVV.append(week_Div);
+				}
+				
+			}
+			f_week_div()
+			
+
+
+
+			function f_null_div(dv) {
+				for (i=0;i<dv;i++) {
+					var null_Div = document.createElement("div");
+					null_Div.style.width = "30px"
+					null_Div.style.height = "30px"
+					null_Div.style.border = "1px solid red"
+					null_Div.style.margin = "1px 1px 1px 1px"
+					null_Div.innerHTML = "&nbsp;"
+					glDIVVVV.append(null_Div);
+				}
+				
+			}
+
+			
+			var tmp_date = new Date(2021,MMM,01);
+			var curr_date = new Date();
+			f_null_div(tmp_date.getDay()-1)
+
+			for(i=1;i<=30;i++) {
+				var doc = document.createElement("div");
+				var loc_Date = new Date();
+				loc_Date.setDate(i);
+				loc_Date.setMonth(MMM);
+				loc_Date.setFullYear(2021);
+				doc.innerHTML = i;
+				if (loc_Date.getDay() == 0) doc.style.backgroundColor = "#fdaf1a"
+				if (loc_Date.getDay() == 6) doc.style.backgroundColor = "#fdaf1a"
+				if (curr_date.getDate() == i) doc.style.backgroundColor = "#1aaffd"
+				doc.style.width = "30px"
+				doc.style.height = "30px"
+				doc.style.border = "1px solid red"
+				doc.style.margin = "1px 1px 1px 1px"
+
+				glDIVVVV.append(doc);
+			}
+
+
+
+
+
+
+		</script>
+
+        
+    </body>
+</html>

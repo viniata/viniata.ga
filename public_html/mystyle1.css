@@ -1,0 +1,293 @@
+body {
+    overflow: scroll;
+}
+
+
+.glTable { width: 1100px; height: 100%;}
+            .glTD_1 { width: 100%; height: 40px;}
+            .glTD_2 { width: 100%; height: 400px;}
+            .glTD_3 { height: 400px;}
+            .glTD_4 { border-top: 1px solid #4422fe;
+                      padding: 10px 0px 0px 0px;        
+            }
+            .div_href_1 { width: 100%; 
+                          height: 35px; 
+                          border-bottom: 1px solid #4422fe;
+                          padding: 15px 0px 0px 0px;
+                          font: bold 14px tahoma;
+                          color: #9e88ff;
+                          cursor: pointer;
+            }
+            .div_href_0 { width: 100%; 
+                          height: 35px; 
+                          border-bottom: 1px solid #000;
+                          padding: 15px 0px 0px 0px;
+                          font: normal 14px tahoma;
+                          color: black;
+                          cursor: pointer;
+            }
+
+            .div_href_ov { width: 100%; 
+                cursor: pointer;
+                height: 35px; 
+                border-bottom: 1px solid greenyellow;
+                padding: 15px 0px 0px 0px;
+                font: normal 14px tahoma;
+                color: greenyellow;
+            }
+
+            .div_href_ou { width: 100%; 
+                height: 35px; 
+                border-bottom: 1px solid #4422fe;
+                padding: 15px 0px 0px 0px;
+                font: normal 14px tahoma;
+                color: black;
+            }
+
+            .img_div { width: 100%; height: 100%; 
+                       background-image: url('glPic.jpg');        
+            }
+            .divCont { text-align: justify; 
+                       padding: 15px 15px 15px 0px;
+                       line-height: 1.5;       
+            }
+			
+			.glTable_reg {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.glTable_1 {
+				background-image: url('glPic.jpg');
+				width: 1100px;
+				height: 400px;
+			}
+			
+            .but_auth {
+                width:100%; height: 100%; 
+                border:0 none; background-color: #40475a; color: white;
+            }
+            .but_reg {
+                width:100%; height: 100%; 
+                border:0 none; background-color: #40475a; color: white;
+            }
+            .but_foggPass {
+                width:100%; height: 100%; 
+                border:0 none; background-color: #40475a; color: white;
+            }
+
+            .div_but_auth {
+                margin:22px 2px 2px 2px; 
+                height: 30px; border-radius: 4px;
+                border: 1px solid #40475a;
+            }
+            .div_but_reg {
+                margin:22px 2px 2px 2px; 
+                height: 30px; border-radius: 4px;
+                border: 1px solid #40475a;
+            }
+            .div_but_foggPass {
+                margin:22px 2px 2px 2px; 
+                height: 30px; border-radius: 4px;
+                border: 1px solid #40475a;
+            }
+
+            .inp_u {
+                margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; 
+                width: 100%;
+                height: 50px;
+                
+                opacity: 0.7;
+                font: normal 14px tahoma;
+            }
+            .div_inp_u {
+                width:100%; height: 100%; border-width:1px;
+                
+            }
+
+
+           
+
+			/* ******************************* */
+            /* ** иссленование *****/
+            .ghghghghg {
+                  background-color: #4422fe;
+              }
+            .ghghghghg:target {
+                background-color: #e5132c;
+            }
+            .ghghghghg:hover {
+                background-color: #13e5c9;
+            }
+.ghghghghg:focus {
+                background-color: #e5e113;
+            }
+            /* ** иссленование *****/
+            /* ******************************* */
+
+
+			/* ******************************* */
+            /* ** модалка *****/
+
+            .modalDialog {
+                position: fixed;
+                font-family: Arial, Helvetica, sans-serif;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0,0,0,0.6);
+                z-index: 99999;
+                -webkit-transition: opacity 400ms ease-in;
+                -moz-transition: opacity 400ms ease-in;
+                transition: opacity 400ms ease-in;
+                display: none;
+                pointer-events: none;
+            }
+        
+            .modalDialog:target {
+                display: block;
+                pointer-events: auto;
+            }
+        
+            .modalDialog > div {
+                width: 400px;
+                position: relative;
+                margin: 10% auto;
+                padding: 35px 20px 20px 20px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.5);
+                аbackground: -moz-linear-gradient(#fff, #999);
+                аbackground: -webkit-linear-gradient(#fff, #999);
+                аbackground: -o-linear-gradient(#fff, #999);
+            }
+        
+            .close {
+                background: #606061;
+                color: #FFFFFF;
+                line-height: 25px;
+                position: absolute;
+                right: -12px;
+                text-align: center;
+                top: -10px;
+                width: 24px;
+                text-decoration: none;
+                font-weight: bold;
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                border-radius: 12px;
+                -moz-box-shadow: 1px 1px 3px #000;
+                -webkit-box-shadow: 1px 1px 3px #000;
+                box-shadow: 1px 1px 3px #000;
+            }
+        
+            .close:hover { background: #e5132c; }
+
+			/* ** модалка *****/
+			/* ********* */
+
+
+            /* ***************************** */
+            /* вкладки ********************* */
+
+            .tabs {
+                font-size: 0;
+                }
+                
+                .tabs>input[type="radio"] {
+                display: none;
+                }
+                
+                .tabs>div {
+                /* скрыть контент по умолчанию */
+                display: none;
+                border: 1px solid #e0e0e0;
+                padding: 10px 15px;
+                font-size: 16px;
+                }
+                
+                /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+                #tab-btn-1:checked~#content-1,
+                #tab-btn-2:checked~#content-2,
+                #tab-btn-3:checked~#content-3 {
+                display: block;
+                }
+                
+                .tabs>label {
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                user-select: none;
+                    background-color: rgba(255, 255, 255, 0.5);
+                border: 1px solid #e0e0e0;
+                padding: 2px 8px;
+                font-size: 16px;
+                line-height: 1.5;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+                cursor: pointer;
+                position: relative;
+                top: 1px;
+                }
+                
+                .tabs>label:not(:first-of-type) {
+                border-left: none;
+                }
+                
+                .tabs>input[type="radio"]:checked+label {
+                background-color: #fff;
+                border-bottom: 1px solid #fff;
+                }
+
+                /* вкладки ********************* */
+                /* ***************************** */
+
+                
+/* Профиль */
+#my_file {
+    display: none;
+}
+
+#get_file {
+    background: #f9f9f9;
+    border: 5px solid #88c;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+/* Профиль */
+
+div#suda {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+}
+
+.Month {
+    width: 350px;
+    border: 3px solid rgb(235, 158, 42);
+    border-radius: 6px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+}
+
+.dayCLDR {
+    border: 1px solid #0000ff;
+    border-radius: 6px;
+    width: 40px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.dayCLDR_null {
+    border: 1px solid #fff;
+    border-radius: 6px;
+    width: 40px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+}

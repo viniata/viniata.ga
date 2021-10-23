@@ -1,0 +1,389 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #313133;
+    color: #aaaaaa;
+    overflow: scroll;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Br */
+.bruh { margin-top: 140px; text-align: center;}
+.bruh2 { width: 64%; text-align: end;}
+.center { text-align: center;}
+.Menu {  
+    color: #000000;
+    }
+
+/* Остальное */
+.glTable { width: 1100px; height: 100%;}
+.glTD_1 { width: 100%; height: 40px;}
+.glTD_2 { width: 100%; height: 400px;}
+.glTD_3 { height: 400px;}
+.glTD_4 { border-top: 1px solid #4422fe;
+padding: 10px 0px 0px 0px;
+}
+
+.div_href_1 { width: 100%; 
+    height: 35px; 
+    border-bottom: 3px solid #9e88ff;
+    padding: 15px 0px 0px 0px;
+    font: bold 14px tahoma;
+    color: #9e88ff;
+}
+.div_href_0 { width: 100%; 
+    height: 35px; 
+    border-bottom: 3px solid #edc681;
+    padding: 15px 0px 0px 0px;
+    font: normal 14px tahoma;
+    color: #edc681;
+}
+
+.div_href_ov { width: 100%; 
+    height: 35px; 
+    border-bottom: 3px solid #eb9e2a;
+    padding: 15px 0px 0px 0px;
+    font: normal 14px tahoma;
+    color: #eb9e2a;
+}
+
+.div_href_ou { width: 100%; 
+    height: 35px; 
+    border-bottom: 3px solid #edc681;
+    padding: 15px 0px 0px 0px;
+    font: normal 14px tahoma;
+    color: #edc681;
+}
+
+.img_div { width: 100%; height: 100%; 
+}
+#img_div1 {width: 100%; height: 100%; 
+    background-image: url('C:/Users/Миша/Desktop/CD/04.10.2021/img/Heroes.jpg');
+}
+#img_div2 {width: 100%; height: 100%; 
+    background-image: url('C:/Users/Миша/Desktop/CD/04.10.2021/img/Warcraft.jpg');
+}
+#img_div3 {width: 100%; height: 100%; 
+    background-image: url('C:/Users/Миша/Desktop/CD/04.10.2021/img/Gothic.jpg');
+}
+#img_div4 {width: 100%; height: 100%; 
+    background-image: url('C:/Users/Миша/Desktop/CD/04.10.2021/img/Lineage.jpg');
+}
+
+.hmm3 {
+    background-image: url('glPic_1.jpg');
+}
+
+.wcf2 {
+    background-image: url('glPic_2.jpg');
+}
+
+.goth {
+    background-image: url('glPic_3.jpg');
+}
+
+.lna2 {
+    background-image: url('glPic_4.jpg');
+}
+
+
+.divCont { text-align: justify;
+    padding: 15px 15px 15px 0px;
+    line-height: 1.5;
+}
+
+/* Ссылки */
+a {
+    color: #000000; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+a:visited {
+    color: #000000; /* Цвет посещённой ссылки */
+} 
+a:hover {
+    color: #ff0000; /* Цвет ссылки при наведении на нее курсора мыши */  
+    text-decoration: underline; /* Добавляем подчеркивание */
+}
+
+.glTable_reg {
+    width: 100%;
+    height: 100%;
+}
+
+.glTable_1 {
+    background-image: url('sdasdasdadasd');
+    width: 1100px;
+    height: 400px;
+}
+
+.but_auth {
+    width:100%; height: 100%; 
+    border:0 none; background-color: #40475a; color: white;
+}
+.but_reg {
+    width:100%; height: 100%; 
+    border:0 none; background-color: #40475a; color: white;
+}
+.but_foggPass {
+    width:100%; height: 100%; 
+    border:0 none; background-color: #40475a; color: white;
+}
+
+.div_but_auth {
+    margin:22px 2px 2px 2px; 
+    height: 30px; border-radius: 4px;
+    border: 1px solid #40475a;
+}
+.div_but_reg {
+    margin:22px 2px 2px 2px; 
+    height: 30px; border-radius: 4px;
+    border: 1px solid #40475a;
+}
+.div_but_foggPass {
+        margin:22px 2px 2px 2px; 
+    height: 30px; border-radius: 4px;
+    border: 1px solid #40475a;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 35px 20px 20px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #e5132c; }
+
+/* Tabs */
+.tabs {
+    font-size: 0;
+}
+
+.tabs>input[type="radio"] {
+    display: none;
+}
+
+.tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+    display: block;
+}
+
+.tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+        background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+.tabs>label:not(:first-of-type) {
+    border-left: none;
+}
+
+.tabs>input[type="radio"]:checked+label {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+/* Вкладки */
+
+/* Профиль */
+#my_file {
+    display: none;
+}
+
+#get_file {
+    background: #f9f9f9;
+    border: 5px solid #88c;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+/* Профиль */
+
+
+
+            /* ******************************* */
+            /* ** иссленование *****/
+            .ghghghghg {
+                  background-color: #4422fe;
+              }
+            .ghghghghg:target {
+                background-color: #e5132c;
+            }
+            .ghghghghg:hover {
+                background-color: #13e5c9;
+            }
+            .ghghghghg:focus {
+                background-color: #e5e113;
+            }
+            /* ** иссленование *****/
+            /* ******************************* */
+
+
+
+div#suda {
+    display: flex;
+    flex-wrap: wrap;
+    width: 368px;
+}
+
+.Month {
+    width: 350px;
+    border: 3px solid #eb9e2a;
+    border-radius: 6px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+    color: #eb9e2a;
+
+}
+
+.dayCLDR_null {
+    border: 3px solid #313133;
+    border-radius: 6px;
+    width: 40px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.dayCLDR {
+    border: 3px solid #edc681;
+    color: #edc681;
+    border-radius: 6px;
+    width: 40px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.currCLDR {
+    border: 3px solid #adff2f;
+    color: #adff2f;
+    border-radius: 6px;
+    width: 40px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.hppCLDR {
+    border: 3px solid #9e88ff;
+    color: #9e88ff;
+    border-radius: 6px;
+    width: 40px;
+    height: 32px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+
+.clockDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 168px;
+}
+
+.clckElem {
+    font-size: 35px;
+    font-weight: bold;
+    aborder:1px solid red;
+}
+
+.clckHH {
+    margin-top: 2px;
+    color: #edc681;
+}
+.clckMI {
+    margin-top: 2px;
+    color: #edc681;
+}
+.clckD1 {
+    margin:0px 3px 0px 3px;
+    color: #edc681;
+}
+.clckD2 {
+    margin:0px 3px 0px 3px;
+    color: #adff2f;
+}
+.clckSS {
+    margin-top: 3px;
+    margin-left: 2px;
+    color: #9e88ff;
+    font-size: 26px;
+}
+
+
+
+            
+            
+            
+            
+            

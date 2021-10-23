@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://viniata.ga/mystyle.css" type="text/css">
+        <script src="myJavaScript.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+        <table border="0" cellspacing="0" cellpadding="0" class="glTable" align="center">
+            <tr>
+                <td class="glTD_1">
+                    <div align="right">  <a href="start_1.html">Выход</a> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="glTD_2">
+                    <div class="img_div"> &nbsp; </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="glTD_3" valign="top">
+
+           
+                                <div class="divCont">
+
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="350px">
+
+                                                <!-- -----------  -->
+                                                <!-- фотко ------ -->
+                                                <div>
+                                                    <img src="fotko.jpg" style="width: 350px; height: 350px;"><br>
+                                                </div>
+
+                                                <!-- фотко ------ -->
+                                                <!-- -----------  -->
+
+                                            </td>
+                                            <td valign="top">
+
+                                                <!-- ----------------------  -->
+                                                <!-- контентная часть ------ -->
+                                                <div>
+                                                    
+                                                    <div class="div_inp_u">
+                                                        <input type="text" placeholder="ФИО" class="inp_u">
+                                                    </div>
+                                                    <div class="div_inp_u">
+                                                        <input type="text" placeholder="email" class="inp_u"> 
+                                                    </div>
+                                                    <div class="div_inp_u">	
+                                                        <input type="text" placeholder="пароль" class="inp_u"> 
+                                                    </div>
+                                                    <div  class="div_inp_u">
+                                                        <input type="text" placeholder="подтврд. пароль" class="inp_u"> 			
+                                                    </div>
+                                                    <div  class="div_inp_u">
+                                                        <input type="button" class="inp_u" onclick="f_clik()"> 			
+                                                        <input type="file" id="file_click" style="display: none;">
+                                                    </div>
+                                                    <script>
+                                                        var event = new Event("click");
+                                                        
+                                                        function f_clik() {
+                                                            file_click.click()
+                                                        }
+
+
+                                                    </script>
+                                                   
+
+                                                </div>
+                                                <!-- контентная часть ------ -->
+                                                <!-- ----------------------  -->
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div  class="div_inp_u" style="height: 36px;">
+                                                    <input type="button" onclick="f_reg()" value="Зарегистрироваться" style="width:100%; height: 100%; border-width:1px; border-radius: 2px; background-color: #40475a; color: white;"> 			
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    
+                                </div>
+                                
+                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="glTD_4">
+                    <div align="center"> &copy; ТСПК </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <div id="openModal" class="modalDialog">
+
+            <div>
+                <a href="#close" title="Закрыть" class="close">X</a>
+                <div class="tabs">
+                        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                        <label for="tab-btn-1">Авторизация</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                        <label for="tab-btn-2">Регистрация</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                        <label for="tab-btn-3">Восст. пароля</label>
+                    
+                        <div id="content-1">
+                            
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">
+                                <input type="text" placeholder="Email" style="width:100%; height: 100%; border-width:1px;">
+                            </div>
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">	
+                                <input type="text" placeholder="пароль" style="width:100%; height: 100%; border-width:1px;"> 
+                            </div>
+                            <div class="div_but_auth">
+                                <input type="button" onclick="f_reg()" value="Войти" class="but_auth"> 			
+                            </div>
+
+                        </div>
+                        <div id="content-2">
+                           
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">
+                                <input type="text" placeholder="Email" style="width:100%; height: 100%; border-width:1px;">
+                            </div>
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">
+                                <input type="" placeholder="ФИО" style="width:100%; height: 100%; border-width:1px;"> 
+                            </div>
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">	
+                                <input type="text" placeholder="пароль" style="width:100%; height: 100%; border-width:1px;"> 
+                            </div>
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">
+                                <input type="text" placeholder="подтврд. пароль" style="width:100%; height: 100%; border-width:1px;"> 			
+                            </div>
+                            <div class="div_but_reg">
+                                <input type="button" onclick="f_reg()" value="Зарегистрироваться" class="but_reg"> 			
+                            </div>
+
+                        </div>
+                        <div id="content-3">
+                            
+                            <div style="margin:2px 2px 2px 2px; padding:2px 2px 2px 2px; height: 30px; opacity: 0.7;">
+                                <input type="text" placeholder="Email" style="width:100%; height: 100%; border-width:1px;">
+                            </div>
+                            <div class="div_but_foggPass">
+                                <input type="button" onclick="f_reg()" value="Отослать" class="but_foggPass"> 			
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+
+
+        </div>
+
+      
+        
+    </body>
+</html>

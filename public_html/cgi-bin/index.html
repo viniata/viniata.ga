@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body onload="starts()">
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+
+			var mesyac_arr = [' ',
+				'январь', 'февраль', 'март', 
+				'апрель','май', 'июнь', 'июль', 
+				'август','сентябрь', 'октябрь', 
+				'ноябрь', 'декабрь'
+			];
+
+			var days = [
+				'Ыы',
+				'Пн',
+				'Вт',
+				'Ср',
+				'Чт',
+				'Пт',
+				'Сб',
+				'Вc'
+			];
+
+			var MMM = 9
+			var tmp_date = new Date(2021,MMM,01);
+			var curr_date = new Date();
+
+			
+
+			var knopki = document.createElement("div");
+				knopki.innerHTML = "<input type='button' value='-' onclick='f_but(0)'>&nbsp;<input type='button' value='+' onclick='f_but(1)'>";
+			document.body.append(knopki);
+
+			var divBODY = document.createElement("div");
+				divBODY.id = "divBODYid";
+			document.body.append(divBODY);
+
+			function f_but(o) {
+				if (o == 0) MMM = MMM - 1
+				if (o == 1) MMM = MMM + 1
+				divBODYid.innerHTML = "";
+				starts()
+			}
+
+		function starts() {
+
+			var mesyac = document.createElement("div");
+				mesyac.style.width = "238px";
+				mesyac.style.height = "32px";
+				mesyac.style.textAlign = "right";
+				mesyac.innerHTML = mesyac_arr[MMM+1]+" 2021";
+			divBODYid.append(mesyac);		
+
+			var doc = document.createElement("div");
+				doc.id = "glDIVVVV"
+				doc.style.width = "238px";
+				doc.style.display = "flex";
+				doc.style.flexWrap = "wrap";
+			divBODYid.append(doc);
+
+
+			function f_week_div() {
+				for (i=1;i<8;i++) {
+					var week_Div = document.createElement("div");
+					week_Div.style.width = "30px"
+					week_Div.style.height = "30px"
+					week_Div.style.border = "1px solid red"
+					week_Div.style.margin = "1px 1px 1px 1px"
+					if (i == 6) week_Div.style.backgroundColor = "#fdaf1a"
+					if (i == 7) week_Div.style.backgroundColor = "#fdaf1a"
+					week_Div.innerHTML = days[i]
+					glDIVVVV.append(week_Div);
+				}
+				
+			}
+
+			f_week_div()
+			
+			function f_null_div(dv) {
+				for (i=0;i<dv;i++) {
+					var null_Div = document.createElement("div");
+					null_Div.style.width = "30px"
+					null_Div.style.height = "30px"
+					null_Div.style.border = "1px solid red"
+					null_Div.style.margin = "1px 1px 1px 1px"
+					null_Div.innerHTML = "&nbsp;"
+					glDIVVVV.append(null_Div);
+				}
+				
+			}
+			
+			f_null_div(tmp_date.getDay()-1)
+
+			for(i=1;i<=30;i++) {
+				var doc = document.createElement("div");
+				var loc_Date = new Date();
+				loc_Date.setDate(i);
+				loc_Date.setMonth(MMM);
+				loc_Date.setFullYear(2021);
+				doc.innerHTML = i;
+				if (loc_Date.getDay() == 0) doc.style.backgroundColor = "#fdaf1a"
+				if (loc_Date.getDay() == 6) doc.style.backgroundColor = "#fdaf1a"
+				if (curr_date.getDate() == i) doc.style.backgroundColor = "#1aaffd"
+				doc.style.width = "30px"
+				doc.style.height = "30px"
+				doc.style.border = "1px solid red"
+				doc.style.margin = "1px 1px 1px 1px"
+
+				glDIVVVV.append(doc);
+			}
+
+		}
+
+
+
+
+
+
+		</script>
+
+        
+    </body>
+</html>

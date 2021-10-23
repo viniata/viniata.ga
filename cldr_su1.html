@@ -1,0 +1,136 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+       .nmeCLDR {width: 100%;
+            height: 30px;
+            margin: 2px 2px 2px 2px;
+            padding: 12px 2px 2px 2px;
+            text-align: center;
+        }
+        .day_line2 {
+            border: 1px solid #046c8f;
+            border-radius: 5px;
+        }
+        .dviCLDR {
+            width: 200px;
+            height: 326px;
+            margin: 2px 2px 2px 2px;
+            padding: 2px 2px 2px 2px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nullLDR {
+            width: 36px;
+            height: 36px;
+            margin: 2px 0px 2px 4px;
+            padding: 2px 2px 2px 2px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+
+        }
+        .dyaCLDR {
+            width: 36px;
+            height: 36px;
+            margin: 2px 0px 2px 4px;
+            padding: 2px 2px 2px 2px;
+        }
+        .cuurCLDR {
+            width: 36px;
+            height: 36px;
+            margin: 2px 0px 2px 4px;
+            padding: 2px 2px 2px 2px;
+        }
+        .hppDay  {
+            width: 36px;
+            height: 36px;
+            margin: 2px 0px 2px 4px;
+            padding: 2px 2px 2px 2px;
+       }
+        .dyaCLDR[name="day_wwc3"] {
+            border: 1px solid #4a5502;
+            border-radius: 5px;
+        }
+        .cuurCLDR[name="day_wwc3"]  {
+            border: 1px solid #4a5502;
+            background-color:  #9ba84c;
+            border-radius: 5px;
+        }
+        .hppDay[name="day_wwc3"]  {
+            border: 1px solid #4a5502;
+            background-color:  #9ba84c;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+    <body>
+<div id="nameCLDR" class="nmeCLDR day_line2" style="margin-left:10px;">ноябрь</div>
+    <div align="left" style="width: 326px; text-align: left; border:1px solid red;
+    
+    display: flex;
+flex-direction: column;
+align-items: center;
+    ">
+        
+        <div id="divCLDR" class="dviCLDR" style="margin-left:2px;"></div>
+    </div>
+
+    <script>
+
+        function getLastDayOfMonth(year, month) {
+            let date = new Date(year, month + 1, 0);
+            return date.getDate();
+        }
+
+        function f_nullDIV() {
+            var nullDate = new Date();
+            nullDate.setDate(1);
+            var dnd = nullDate.getDay()
+            
+            for(i=1; i<=dnd-1; i++){
+                var divNUll = document.createElement("div");
+                divNUll.className = "nullLDR";
+                divNUll.innerHTML = "&nbsp;";
+                divCLDR.append(divNUll);
+            }
+        }
+
+
+        var mesyac_arr = [
+                            'январь', 'февраль', 'март', 
+                            'апрель','май', 'июнь', 'июль', 
+                            'август','сентябрь', 'октябрь', 
+                            'ноябрь', 'декабрь'
+                
+                        ];
+            var curDate = new Date();
+            
+        function sozdCLDR(){
+
+            var loopDate = new Date();
+
+            nameCLDR.innerHTML = mesyac_arr[curDate.getMonth()] + "&nbsp;" + curDate.getFullYear();
+
+            for(i=1; i<=getLastDayOfMonth(curDate.getFullYear(), curDate.getMonth()); i++){
+                var divD = document.createElement("div");
+                loopDate.setDate(i)
+                divD.className = "dyaCLDR";
+                divD.setAttribute("name","day_wwc3")
+                divD.innerHTML = "<div style='margin-top: 9px;'>"+i+"</div>";
+                if (i == curDate.getDate()) divD.className = "cuurCLDR"; 
+                if (loopDate.getDay() == 6) divD.className = "hppDay"; 
+                if (loopDate.getDay() == 0) divD.className = "hppDay"; 
+                divCLDR.append(divD);
+            }
+        }
+
+        f_nullDIV()
+        sozdCLDR()
+    </script>
+
+    </body>
+</html>
